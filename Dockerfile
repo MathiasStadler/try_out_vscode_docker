@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
   software-properties-common \
   ssh \
   wget \
-  xvfb \
-  apt-get -qq clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/fonts/truetype/noto
+  xvfb
+  
+  RUN apt-get -qq clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/fonts/truetype/noto
 
   COPY start.sh start.sh
